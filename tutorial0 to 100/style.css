@@ -1,0 +1,38 @@
+* , ::backdrop , ::before {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+html {
+    font: size 62.5%;
+  }
+.main{
+    h1{
+        font-size: 3rem;
+text-wrap: wrap;
+    }
+    margin: auto;
+}
+.excersice1{
+    margin: auto;
+    border: 2px blue solid;
+    border-radius: 20px;
+    width: 30rem;
+    background-color: white;
+}
+img{
+    display: block;
+    margin: auto;
+}
+button{
+    padding: 1.5rem 2rem;
+    background-color: orangered;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+    margin: 1rem auto;
+
+    text-transform: capitalize;}
+    .button-box{
+        display: flex;
+    }
