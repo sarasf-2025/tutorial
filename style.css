@@ -1,0 +1,97 @@
+* , ::backdrop , ::before {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+}
+html {
+    font: size 62.5%;
+  }
+.main{  
+      display: flex;
+      flex-direction: row;
+     justify-content: space-between;
+     background-color: aquamarine;
+     align-items:stretch;
+     gap: 10px;
+
+   
+ 
+}
+ h1{
+        font-size: 2.5rem;
+        text-wrap: wrap;
+        text-transform: capitalize;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           margin: auto;
+
+
+    }
+.turnlamp{
+    margin: auto;
+    border: 2px blue solid;
+    border-radius: 20px;
+    width: 30rem;
+    background-color: white;
+
+}
+img{
+    display: block;
+    margin: auto;
+}
+button{
+    padding: 1rem 1.5rem;
+    background-color: orangered;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+    margin: 1rem auto;
+
+    text-transform: capitalize;
+}
+    .button-box{
+        display: flex;
+    }
+/* exercise 2 obj */
+.objtest{
+    margin: auto;
+    border: 2px blue solid;
+    border-radius: 20px;
+    width: 30rem;
+    background-color:white;
+    height:auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.course_name{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.course{
+    font-size: 1.5rem;
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+    border-radius: 25%;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin: 2rem auto;
+
+}
+.course:hover{
+    background-color: orangered;
+}
+.course_property{
+    font-size: 1.5rem;
+    margin: 0.5rem;
+       text-transform:capitalize;
+       background-color: orange;
+       padding: 1rem;
+       display: none;
+}
+
+
