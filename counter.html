@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <button class="btn crement">+</button>
+          <button class="btn reset">reset</button>
+        <button class="btn decrement">-</button>
+        <div class="counter">
+            <span>counter is :</span>
+            <span class="counter-value">0</span>
+        </div>
+</body>
+<script >
+//     const crement = document.querySelector(".crement");
+// const decrement = document.querySelector(".decrement");
+// const reset = document.querySelector(".reset");
+// const countervalue = document.querySelector(".counter-value")
+// let count = Number(countervalue.textContent);
+// crement.addEventListener("click",()=>{
+//    count++;
+//     countervalue.textContent=count;
+// });
+// decrement.addEventListener("click",()=>{
+//    count--;
+//     countervalue.textContent=count;
+// });
+// reset.addEventListener("click",()=>{
+
+//     countervalue.textContent=0;
+// });
+const countervalue = document.querySelector(".counter-value")
+let count = Number(countervalue.textContent);
+const button = document.querySelectorAll(".btn");
+button.forEach((btn)=>{
+    btn.addEventListener("click",()=>
+    {const classlist = btn.classList;
+     if (classlist.contains("crement"))count++;
+     if (classlist.contains("decrement"))count--; 
+     if (classlist.contains("reset"))count=0; 
+     if (count>0) countervalue.style.color = "green"
+     else countervalue.style.color="red";
+      countervalue.textContent=count;
+    } )
+   
+})
+</script>
+</html>
