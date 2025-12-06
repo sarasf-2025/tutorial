@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/todoliststyle.css">
+    <title>ToDoList</title>
+</head>
+<body>
+  <header>To DO List</header>
+ <div class="container">
+   <div class="formContainer">
+     <form action="">
+         <input type="text"class="todo-input">
+         <button class="todo-button"type="submit">
+             <li class="fas fa-plus-circle"></li>
+          </button>
+       </form>
+     <div class="select">
+        <select class="filter-todos" name="todos">
+            <option value="all">all</option>
+            <option value="compeleted">completed</option>
+            <option value="uncompleted" >uncompleted</option>
+
+        </select>
+      </div>
+
+    </div>
+ </div>
+ <div class="todo-container">
+    <ul class="todo-list">
+        <li class="todo">
+            <p class="todo__title">todo 1</p>
+            <span class="todo__creatat">28.01.1404  </span>
+            <button><i class="todo__check far fa-check-squre"></i></button>
+ <button><i class="todo__remove far fa-trash-alt"></i></button>
+        </li>
+    </ul>
+ </div>
+</body>
+<script src="/todolist.js"></script>
+</html>
