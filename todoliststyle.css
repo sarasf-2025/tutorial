@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 80%;
+    background-color: bisque;
+}
+input{
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(235, 246, 246);
+    box-shadow: inset;
+    height: 2rem;
+    width:100%;
+}
+.todo-button{
+    position: relative;
+    border: solid 3px orange;
+    border-radius: 25px;
+    margin-left: -50px;
+  
+
+
+}
+form{
+    display: flex;
+    }
