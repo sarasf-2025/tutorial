@@ -1,12 +1,33 @@
 body{
-    display: flex;
+   
+ 
+    background-color: bisque;
+
+}
+header{
+    margin: auto;
+  
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    width: 80%;
-    background-color: bisque;
+    padding: 5rem  3rem;
+    margin: auto;
+    border-radius: 2rem;
+
 }
+.formcontainer{
+  
+    width: 90%;
+    display: inline-block;
+}
+
 input{
     border-radius: 25px;
     border: none;
@@ -14,16 +35,39 @@ input{
     box-shadow: inset;
     height: 2rem;
     width:100%;
+   box-shadow: 10px 5px 5px gray;
+   font: 1em sans-serif;
 }
 .todo-button{
     position: relative;
     border: solid 3px orange;
     border-radius: 25px;
     margin-left: -50px;
-  
+  cursor: pointer;
 
 
 }
 form{
     display: flex;
+    }
+    .select{
+         position: relative;
+    background-color: #fff;
+    border: 2px solid #000;
+    }
+    .select::after{
+       content: '▼';
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+    }
+    select{
+      color: #000;
+    padding-right: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;   
     }
