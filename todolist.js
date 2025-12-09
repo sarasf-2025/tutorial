@@ -5,25 +5,37 @@ const todoForm=document.querySelector(".todo-form");
 const todolist=document.querySelector(".todo-list");
 todoInput.addEventListener("submit",addNewtodo);
 function addNewtodo(e){
-    e.preventDefult()
-    if(!toDos.value) return "null";
-    const toDos={
+    console.log(todoInput.value)
+  e.preventDefault();
+    if(!todoInput.value) return "null";
+    const newTodo={
         id:Date.now(),
-        creatAt:new Date().toisustraing(),
+        createdAt:new Date().toISOString(),
         title:todoInput.value,
         iscompelet:false
 
     }
-    toDos.push(new todos);
-    let result = "";
+todos.push(newTodo)
+let result="";
+  
 
-toDos.forEach((todo) => {
-    result+= `<li class="todo">
-            <p class="todo__title">todo 1</p>
-            <span class="todo__creatat">28.01.1404  </span>
-            <button><i class="todo__check far fa-check-squre"></i></button>
- <button><i class="todo__remove far fa-trash-alt"></i>`
+todos.forEach((todo) => {
+    result += `<li class="todo">
+      <p class="todo__title ${todo.isCompleted && "completed"}">${
+      todo.title
+    }</p>
+      <span class="todo__createdAt">${new Date(
+        todo.createdAt
+      ).toLocaleDateString("fa-IR")}</span>
+      <button class="todo__check" data-todo-id=${
+        todo.id
+      } ><i class="far fa-check-square"></i></button>
+      <button class="todo__remove" data-todo-id=${
+        todo.id
+      } ><i class="far fa-trash-alt"></i></button>
+    </li>`
 });
 todolist.innerHTML=result;
+todoInput.value = "";
 
 }

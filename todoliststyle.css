@@ -1,73 +1,151 @@
-body{
-   
- 
-    background-color: bisque;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iranyekan";
+  list-style: none;
 }
-header{
-    margin: auto;
-  
+
+/*  VARIABLES : */
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --secondayGrey:#ccc;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
 }
+body{
+   font-family: "iranyekan";
+  color: var(--mainBlack);
+  background-color: var(--bodyColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .container{
-    background-color: white;
-    width: 80%;
      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    padding: 5rem  3rem;
-    margin: auto;
-    border-radius: 2rem;
+  flex-direction: column;
+  justify-content: flex-start;
 
 }
-.formcontainer{
-  
-    width: 90%;
-    display: inline-block;
+.form-container {
+  display: flex;
 }
 
-input{
-    border-radius: 25px;
-    border: none;
-    background-color: rgb(235, 246, 246);
-    box-shadow: inset;
-    height: 2rem;
-    width:100%;
-   box-shadow: 10px 5px 5px gray;
-   font: 1em sans-serif;
+.todo-container {
+  margin-top: 1rem;
+  width: 25rem;
 }
-.todo-button{
-    position: relative;
-    border: solid 3px orange;
-    border-radius: 25px;
-    margin-left: -50px;
+form {
+  width: 25rem;
+  background-color: var(--mainWhite);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border:2px solid var(--secondayGrey);
+  overflow: hidden;
+}
+form input {
+  flex: 1;
+  font-weight: bold;
+}
+form input,
+form button {
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+form button {
+  color: var(--primaryColor);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover {
+  background-color: var(--primaryColor);
+  color: var(--mainWhite);
+}
+.todo {
+  background-color: var(--mainWhite);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  display: flex;
+}
+.todo .todo__title {
+  color: var(--primaryColor);
+  font-weight: bold;
+  flex: 1;
+}
 
+.todo button {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.fa-trash-alt {
+  color: var(--mainRed);
+}
+.fa-check-square {
+  color: var(--primaryColor);
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--primaryColor);
+}
+
+.select {
+  margin-left: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  width: 10rem;
+  position: relative;
+  border: 2px solid var(--secondayGrey);
+  font-weight: bold;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--primaryColor);
+  pointer-events: none;
+}
+
+
+button{
+  border: none;
+  outline: 0;
 
 }
-form{
-    display: flex;
-    }
-    .select{
-         position: relative;
-    background-color: #fff;
-    border: 2px solid #000;
-    }
-    .select::after{
-       content: '▼';
-    color: #000;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; 
-    }
-    select{
-      color: #000;
-    padding-right: 30px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;   
-    }
+button > i {
+  pointer-events: none;
+} 
